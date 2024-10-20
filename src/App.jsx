@@ -12,7 +12,7 @@ const App = () => {
     if (token) {
       // Send the reCAPTCHA token to the backend for verification
       axios
-        .post('http://localhost:5000/verify-recaptcha', { token })
+        .post('https://recaptcha-nodejs.onrender.com/verify-recaptcha', { token })
         .then((response) => {
           if (response.data.success) {
             setVerified(true);
